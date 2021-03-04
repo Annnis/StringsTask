@@ -96,14 +96,12 @@ public class StringTest {
         String expected = "Fiveive bhbh";
         Assertions.assertEquals(actual, expected);
     }
-//    @Test
-//    public void reverse() {
-//            StringBuffer sbOne = new StringBuffer(First.reverse("yuyuyu"));
-//            StringBuffer sbTwo = new StringBuffer("hello");
-//            First iui = new First();
-//            boolean hel = iui.StringBuff(sbOne, sbTwo);
-//        Assertions.assertEquals(true, hel);
-//        }
+    @Test
+    public void reverse() {
+        String actual = First.reverse("Five hjh Five bhbh");
+        String expected = "hbhb eviF hjh eviF";
+        Assertions.assertEquals(actual, expected);
+        }
 
     @Test
     public void deleteLastWord() {
