@@ -54,25 +54,23 @@ public class First {
     }
     //1
     public static String intToString(int num) {
-        String str = String.valueOf(num);
-        return str;
+        return String.valueOf(num);
     }
     //2
     public static String doubleToString(double num) {
-        String str = String.valueOf(num);
-        return str;
+        return  String.valueOf(num);
+
     }
 
     //3
     public static int stringToInt(String myString) {
-        int i = Integer.parseInt(myString);
-        return i;
+        return Integer.parseInt(myString);
     }
 
     //4
     public static double stringToDouble(String myString) {
-        double i = Double.valueOf(myString);
-        return i;
+        return Double.valueOf(myString);
+
     }
     //1
     public static int lengthOfSmallestWord(String s) {
