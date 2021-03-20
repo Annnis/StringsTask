@@ -6,18 +6,17 @@ import org.junit.jupiter.api.Test;
 public class StringTest {
     @Test
     public void outUpper() {
-        char[] actual = First.outUpper();
-        char[] expected = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-        Assertions.assertArrayEquals(actual, expected);
+        String actual = First.outUpper();
+        String expected = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void outLower() {
-        char[] actual = First.outLower();
-        char[] expected = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-        Assertions.assertArrayEquals(actual, expected);
+    public void ASCII_Test(){
+        String actual = First.outLower();
+        String expected = "zyxwvutsrqponmlkjihgfedcba";
+        Assertions.assertEquals(expected, actual);
     }
-
     @Test
     public void outRU() {
         char[] actual = First.outRU();
@@ -66,7 +65,7 @@ public class StringTest {
         Assertions.assertEquals(actual, expected);
     }
 
-//    @Test
+    //    @Test
 //    public void test_add_space() {
 //        String actual = First.add_space("cara apple id fox", 4);
 //        String expected = "c$$$";
@@ -97,11 +96,11 @@ public class StringTest {
         Assertions.assertEquals(actual, expected);
     }
     @Test
-    public void reverse() {
-        String actual = First.reverse("Five hjh Five bhbh");
-        String expected = "hbhb eviF hjh eviF";
+    public void test_reverse(){
+        String actual = First.reverse("qwertyuiop");
+        String expected = "poiuytrewq";
         Assertions.assertEquals(actual, expected);
-        }
+    }
 
     @Test
     public void deleteLastWord() {
@@ -111,6 +110,7 @@ public class StringTest {
     }
 
 }
+
 
 
 
