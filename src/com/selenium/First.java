@@ -28,12 +28,13 @@ public class First {
     }
 
     //3
-    public static char[] outRU() {
+    public static String outRU() {
         char[] alpha = new char[32];
         for (int i = 0; i < 32; i++) {
             alpha[i] = (char) (1072 + i);
         }
-        return alpha;
+        String arr = new String(alpha);
+        return arr;
     }
 
     //4
@@ -45,12 +46,12 @@ public class First {
         return numbers;
     }
     //5
-    public static char[] symbolsASCII() {
+    public static String symbolsASCII() {
         char[] symbols = new char[95];
         for (char i = 0; i <= 94; i++) {
             symbols[i] = (char) (32 + i);
         }
-        return symbols;
+        return new String(symbols);
     }
     //1
     public static String intToString(int num) {
@@ -95,15 +96,9 @@ public class First {
 
     }
 
-    public static String add_space(String value){
-        Pattern pattern = Pattern.compile("[\\pP\\W]");
-        Matcher matcher = pattern.matcher(value);
-        while(matcher.find()) {
-            String w = matcher.group();
-            value = value.replaceAll("\\s+" + w, w + " ");
-            value = value.replaceAll("\\s+", " ");
-        }
-        return value;
+    public static String add_space(String word){
+         word = word.replaceAll("(?<=\\p{Punct})(?=\\w)", " ");
+        return word;
     }
 
     public static String getUniqueChar(String value){
